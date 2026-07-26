@@ -1,0 +1,793 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Players Gallery</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap');
+
+* {
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a 0%,#1a1f35 50%,#0f172a 100%);
+    font-family:'Inter',Arial,sans-serif;
+    color:white;
+}
+
+.container{
+    width:92%;
+    max-width:1400px;
+    margin:auto;
+    padding:50px 0;
+}
+
+.title{
+    text-align:center;
+    font-size:44px;
+    font-weight:800;
+    letter-spacing:-1px;
+    margin-bottom:10px;
+    background:linear-gradient(135deg,#fbbf24,#f59e0b);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+
+.subtitle{
+    text-align:center;
+    color:#64748b;
+    font-size:15px;
+    margin-bottom:12px;
+    font-weight:500;
+}
+
+.count{
+    text-align:center;
+    color:#475569;
+    font-size:13px;
+    font-weight:500;
+    margin-bottom:45px;
+}
+
+.players{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(165px,1fr));
+    gap:16px;
+}
+
+.player-card{
+    display:flex;
+    flex-direction:column;
+    background:rgba(30,41,59,0.5);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:16px;
+    overflow:hidden;
+    text-decoration:none;
+    transition:all 0.3s ease;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+.player-card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(59,130,246,0.3);
+    box-shadow:0 12px 30px rgba(37,99,235,0.25);
+}
+
+.player-card .img-wrap{
+    width:100%;
+    aspect-ratio:1/1;
+    overflow:hidden;
+    background:#1e293b;
+}
+
+.player-card .img-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 0.4s ease;
+}
+
+.player-card:hover .img-wrap img{
+    transform:scale(1.08);
+}
+
+.player-card .name{
+    padding:12px 10px 10px;
+    font-size:13.5px;
+    font-weight:600;
+    color:#e2e8f0;
+    text-align:center;
+    letter-spacing:0.2px;
+    line-height:1.3;
+    border-top:1px solid rgba(255,255,255,0.05);
+}
+
+.player-card:hover .name{
+    color:white;
+}
+
+.player-card .links{
+    display:flex;
+    gap:4px;
+    padding:0 8px 10px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.player-card .links .link{
+    font-size:10px;
+    font-weight:600;
+    padding:4px 8px;
+    border-radius:6px;
+    text-decoration:none;
+    color:white;
+    transition:opacity 0.2s;
+    letter-spacing:0.3px;
+}
+
+.player-card .links .link:hover{
+    opacity:0.8;
+}
+
+.link.getty{background:#dc2626}
+.link.alamy{background:#0891b2}
+.link.imago{background:#7c3aed}
+.link.photoshelter{background:#059669}
+.link.shutterstock{background:#ea580c}
+.link.pixsell{background:#0ea5e9}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="title">Players Gallery</h1>
+    <p class="subtitle">Getty Images - Sport Editorial</p>
+    <p class="count">42 players</p>
+
+    <div class="players">
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Kiernan-Dewsbury-Hall.jpg" alt="Kiernan Dewsbury-Hall" loading="lazy">
+            </div>
+            <div class="name">Kiernan Dewsbury-Hall</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=Kiernan%20Dewsbury-Hall&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Dewsbury-Hall.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Dewsbury%20Hall" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Dewsbury%20Hall+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/kiernan-dewsbury-hall?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=kiernan%20dewsbury-hall" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Tyler-Morton.jpg" alt="Tyler Morton" loading="lazy">
+            </div>
+            <div class="name">Tyler Morton</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?family=editorial&editorialproducts=sport&phrase=Tyler+Morton&sort=newest" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Tyler-Morton.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Tyler%20Morton" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Tyler%20Morton+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/tyler-morton?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=tyler%20morton" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Matteo-Cancellieri.jpg" alt="Matteo Cancellieri" loading="lazy">
+            </div>
+            <div class="name">Matteo Cancellieri</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=Matteo%20Cancellieri&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Matteo-Cancellieri.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Matteo%20Cancellieri" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Matteo%20Cancellieri+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/matteo-cancellieri?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=matteo%20cancellieri" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Samuele-Ricci.jpg" alt="Samuele Ricci" loading="lazy">
+            </div>
+            <div class="name">Samuele Ricci</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=Samuele%20Ricci&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Samuele-Ricci.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Samuele%20Ricci" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Samuele%20Ricci+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/samuele-ricci?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=samuele%20ricci" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Nicolo-Fagioli.jpg" alt="Nicolo Fagioli" loading="lazy">
+            </div>
+            <div class="name">Nicolo Fagioli</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=Nicolo%20Fagioli&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Nicolo-Fagioli.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Nicolo%20Fagioli" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Nicolo%20Fagioli+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/nicolo-fagioli?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=nicolo%20fagioli" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Callum-Doyle.jpg" alt="Callum Doyle" loading="lazy">
+            </div>
+            <div class="name">Callum Doyle</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=Callum%20Doyle&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Callum-Doyle.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Callum%20Doyle" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Callum%20Doyle+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/callum-doyle?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=callum%20doyle" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Todd-Cantwell.jpg" alt="Todd Cantwell" loading="lazy">
+            </div>
+            <div class="name">Todd Cantwell</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=Todd%20Cantwell&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Todd-Cantwell.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Todd%20Cantwell" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Todd%20Cantwell+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/todd-cantwell?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=todd%20cantwell" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Alfie-Gilchrist.jpg" alt="Alfie Gilchrist" loading="lazy">
+            </div>
+            <div class="name">Alfie Gilchrist</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=alfie%20gilchrist&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Alfie-Gilchrist.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Alfie%20Gilchrist" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Alfie%20Gilchrist+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/alfie-gilchrist?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=alfie%20gilchrist" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/James-Mcatee.jpg" alt="James Mcatee" loading="lazy">
+            </div>
+            <div class="name">James Mcatee</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?family=editorial&editorialproducts=sport&phrase=james+mcatee&sort=newest" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/James-Mcatee.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=James%20Mcatee" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=James%20Mcatee+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/james-mcatee?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=james%20mcatee" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Luke-Thomas.jpg" alt="Luke Thomas" loading="lazy">
+            </div>
+            <div class="name">Luke Thomas</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?family=editorial&editorialproducts=sport&phrase=Luke+Thomas&sort=newest" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Luke-Thomas.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Luke%20Thomas" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Luke%20Thomas+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/luke-thomas?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=luke%20thomas" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Tyler-Dibling.jpg" alt="Tyler Dibling" loading="lazy">
+            </div>
+            <div class="name">Tyler Dibling</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Tyler%20Dibling&sort=newest" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Tyler-Dibling.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Tyler%20Dibling" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Tyler%20Dibling+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/tyler-dibling?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=tyler%20dibling" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Jimmy-Jay-Morgan.jpg" alt="Jimmy Jay Morgan" loading="lazy">
+            </div>
+            <div class="name">Jimmy Jay Morgan</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=jimmy%20jay%20morgan&sort=newest" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Jimmy-Jay-Morgan.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Jimmy%20Jay%20Morgan" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Jimmy%20Jay%20Morgan+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/jimmy-jay-morgan?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=jimmy%20jay%20morgan" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Freddie-Potts.jpg" alt="Freddie Potts" loading="lazy">
+            </div>
+            <div class="name">Freddie Potts</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Freddie%20Potts&sort=newest" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Freddie-Potts.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Freddie%20Potts" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Freddie%20Potts+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/freddie-potts?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=freddie%20potts" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Fabian-Reese.jpg" alt="Fabian Reese" loading="lazy">
+            </div>
+            <div class="name">Fabian Reese</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=fabian%20reese&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Fabian-Reese.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Fabian%20Reese" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Fabian%20Reese+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/fabian-reese?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=fabian%20reese" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/James-Garner.jpg" alt="James Garner" loading="lazy">
+            </div>
+            <div class="name">James Garner</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=%20James%20Garner&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/James-Garner.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=James%20Garner" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=James%20Garner+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/james-garner?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=james%20garner" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Riccardo-Calafiori.jpg" alt="Riccardo Calafiori" loading="lazy">
+            </div>
+            <div class="name">Riccardo Calafiori</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=Riccardo%20Calafiori&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Riccardo-Calafiori.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Riccardo%20Calafiori" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Riccardo%20Calafiori+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/riccardo-calafiori?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=riccardo%20calafiori" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Dean-Huijsen.jpg" alt="Dean Huijsen" loading="lazy">
+            </div>
+            <div class="name">Dean Huijsen</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=dean%20huijsen&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Dean-Huijsen.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Dean%20Huijsen" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Dean%20Huijsen+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/dean-huijsen?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=dean%20huijsen" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Elliot-Anderson.jpg" alt="Elliot Anderson" loading="lazy">
+            </div>
+            <div class="name">Elliot Anderson</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=Elliot%20Anderson&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Elliot-Anderson.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Elliot%20Anderson" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Elliot%20Anderson+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/elliot-anderson?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=elliot%20anderson" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Liam-Delap.jpg" alt="Liam Delap" loading="lazy">
+            </div>
+            <div class="name">Liam Delap</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=liam%20delap&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Liam-Delap.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Liam%20Delap" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Liam%20Delap+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/liam-delap?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=liam%20delap" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Scott-McTominay.jpg" alt="Scott McTominay" loading="lazy">
+            </div>
+            <div class="name">Scott McTominay</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=scott%20mctominay&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Scott-McTominay.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Scott%20McTominay" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Scott%20McTominay+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/scott-mctominay?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=scott%20mctominay" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Nicola-Zalewski.jpg" alt="Nicola Zalewski" loading="lazy">
+            </div>
+            <div class="name">Nicola Zalewski</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Nicola%20Zalewski&sort=newest&phraseprocessing=excludenaturallanguage&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Nicola-Zalewski.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Nicola%20Zalewski" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Nicola%20Zalewski+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/nicola-zalewski?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=nicola%20zalewski" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Harrison-Ashby.jpg" alt="Harrison Ashby" loading="lazy">
+            </div>
+            <div class="name">Harrison Ashby</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=harrison%20ashby&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Harrison-Ashby.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Harrison%20Ashby" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Harrison%20Ashby+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/harrison-ashby?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=harrison%20ashby" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Dennis-Cirkin.jpg" alt="Dennis Cirkin" loading="lazy">
+            </div>
+            <div class="name">Dennis Cirkin</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?phraseprocessing=excludenaturallanguage&editorialproducts=sport&family=editorial&phrase=dennis%20cirkin&sort=newest&suppresspeoplecorrection=true" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Dennis-Cirkin.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Dennis%20Cirkin" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Dennis%20Cirkin+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/dennis-cirkin?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=dennis%20cirkin" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Nico-Paz.jpg" alt="Nico Paz" loading="lazy">
+            </div>
+            <div class="name">Nico Paz</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=nico%20paz&sort=newest&suppresspeoplecorrection=true&phraseprocessing=excludenaturallanguage" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Nico-Paz.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Nico%20Paz" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Nico%20Paz+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/nico-paz?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=nico%20paz" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Alejandro-Garnacho.jpg" alt="Alejandro Garnacho" loading="lazy">
+            </div>
+            <div class="name">Alejandro Garnacho</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=alejandro%20garnacho&sort=newest&phraseprocessing=excludenaturallanguage" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Alejandro-Garnacho.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Alejandro%20Garnacho" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Alejandro%20Garnacho+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/alejandro-garnacho?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=alejandro%20garnacho" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Nico-O'Reilly.jpg" alt="Nico O'Reilly" loading="lazy">
+            </div>
+            <div class="name">Nico O'Reilly</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Nico%20O%27Reilly%20&sort=newest&phraseprocessing=excludenaturallanguage" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Nico-O'Reilly.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Nico%20O'Reilly" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Nico%20O'Reilly+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/nico-o'reilly?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=nico%20o'reilly" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Benjamin-Sesko.jpg" alt="Benjamin Sesko" loading="lazy">
+            </div>
+            <div class="name">Benjamin Sesko</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=benjamin%20sesko&sort=newest&phraseprocessing=excludenaturallanguage" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Benjamin-Sesko.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Benjamin%20Sesko" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Benjamin%20Sesko+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/benjamin-sesko?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=benjamin%20sesko" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Adam-Wharton.jpg" alt="Adam Wharton" loading="lazy">
+            </div>
+            <div class="name">Adam Wharton</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=adam%20wharton&sort=newest&phraseprocessing=excludenaturallanguage" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Adam-Wharton.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Adam%20Wharton" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Adam%20Wharton+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/adam-wharton?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=adam%20wharton" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Nico-Schlotterbeck.jpg" alt="Nico Schlotterbeck" loading="lazy">
+            </div>
+            <div class="name">Nico Schlotterbeck</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Nico%20Schlotterbeck&sort=newest&phraseprocessing=excludenaturallanguage" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Nico-Schlotterbeck.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Nico%20Schlotterbeck" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Nico%20Schlotterbeck+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/nico-schlotterbeck?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=nico%20schlotterbeck" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Kenan-Yildiz.jpg" alt="Kenan Yildiz" loading="lazy">
+            </div>
+            <div class="name">Kenan Yildiz</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=KENAN%20YILDIZ%20&sort=newest&phraseprocessing=excludenaturallanguage" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Kenan-Yildiz.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Kenan%20Yildiz" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Kenan%20Yildiz+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/kenan-yildiz?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=kenan%20yildiz" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Leandro-Trossard.jpg" alt="Leandro Trossard" loading="lazy">
+            </div>
+            <div class="name">Leandro Trossard</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Leandro%20Trossard&sort=newest&phraseprocessing=excludenaturallanguage" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Leandro-Trossard.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Leandro%20Trossard" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Leandro%20Trossard+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/leandro-trossard?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=leandro%20trossard" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Strand-Larsen.jpg" alt="Strand Larsen" loading="lazy">
+            </div>
+            <div class="name">Strand Larsen</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Strand%20Larsen&sort=newest" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Strand-Larsen.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Strand%20Larsen" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Strand%20Larsen+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/strand-larsen?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=strand%20larsen" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Zian-Flemming.jpg" alt="Zian Flemming" loading="lazy">
+            </div>
+            <div class="name">Zian Flemming</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=zian%20flemming&sort=newest" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Zian-Flemming.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Zian%20Flemming" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Zian%20Flemming+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/zian-flemming?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=zian%20flemming" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Cole-Palmer.jpg" alt="Cole Palmer" loading="lazy">
+            </div>
+            <div class="name">Cole Palmer</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Cole%20Palmer&sort=newest&phraseprocessing=excludenaturallanguage" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Cole-Palmer.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Cole%20Palmer" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Cole%20Palmer+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/cole-palmer?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=cole%20palmer" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Ethan-Galbraith.jpg" alt="Ethan Galbraith" loading="lazy">
+            </div>
+            <div class="name">Ethan Galbraith</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Ethan%20Galbraith&sort=newest&phraseprocessing=excludenaturallanguage" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Ethan-Galbraith.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Ethan%20Galbraith" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Ethan%20Galbraith+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/ethan-galbraith?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=ethan%20galbraith" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Jesse-Derry.jpg" alt="Jesse Derry" loading="lazy">
+            </div>
+            <div class="name">Jesse Derry</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Jesse%20Derry&sort=newest" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Jesse-Derry.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Jesse%20Derry" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Jesse%20Derry+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/jesse-derry?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=jesse%20derry" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Lucas-Bergvall.jpg" alt="Lucas Bergvall" loading="lazy">
+            </div>
+            <div class="name">Lucas Bergvall</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Lucas%20Bergvall&sort=newest" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Lucas-Bergvall.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Lucas%20Bergvall" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Lucas%20Bergvall+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/lucas-bergvall?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=lucas%20bergvall" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Max-Dowman.jpg" alt="Max Dowman" loading="lazy">
+            </div>
+            <div class="name">Max Dowman</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Max%20Dowman&sort=newest" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Max-Dowman.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Max%20Dowman" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Max%20Dowman+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/max-dowman?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=max%20dowman" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Arda-Guler.jpg" alt="Arda Guler" loading="lazy">
+            </div>
+            <div class="name">Arda Guler</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Arda%20Guler&sort=newest" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Arda-Guler.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Arda%20Guler" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Arda%20Guler+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/arda-guler?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=arda%20guler" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Pio-Esposito.jpg" alt="Pio Esposito" loading="lazy">
+            </div>
+            <div class="name">Pio Esposito</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Pio%20Esposito&sort=newest" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Pio-Esposito.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Pio%20Esposito" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Pio%20Esposito+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/pio-esposito?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=pio%20esposito" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Archie-Gray.jpg" alt="Archie Gray" loading="lazy">
+            </div>
+            <div class="name">Archie Gray</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Archie%20Gray&sort=newest" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Archie-Gray.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Archie%20Gray" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Archie%20Gray+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/archie-gray?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=archie%20gray" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="img-wrap">
+                <img src="images/Andreas-Schjelderup.jpg" alt="Andreas Schjelderup" loading="lazy">
+            </div>
+            <div class="name">Andreas Schjelderup</div>
+            <div class="links">
+                <a href="https://www.gettyimages.ae/search/2/image?editorialproducts=sport&family=editorial&phrase=Andreas%20Schjelderup&sort=newest" target="_blank" class="link getty" title="Getty Images">Getty</a>
+                <a href="https://www.alamy.com/stock-photo/Andreas-Schjelderup.html?collectiontype=editorial-core&amp;sortBy=newest-datetaken" target="_blank" class="link alamy" title="Alamy">Alamy</a>
+                <a href="https://www.imago-images.de/search?querystring=Andreas%20Schjelderup" target="_blank" class="link imago" title="Imago">Imago</a>
+                <a href="https://www.photoshelter.com/search/search?I_DSC=Andreas%20Schjelderup+&I_DSC_AND=t&I_CITY=&I_STATE=&I_COUNTRY_ISO=&I_IS_RELEASED=&I_IS_PRELEASED=&I_ORIENTATION=&_CB_I_PR=t&_CB_I_PU=t&_CB_I_RF=t&_CB_I_RM=t&I_SORT=DATE&C_ID=&_ACT=search&F_REFINE=t" target="_blank" class="link photoshelter" title="Photoshelter">Photoshelter</a>
+                <a href="https://www.shutterstock.com/editorial/search/andreas-schjelderup?sort=date" target="_blank" class="link shutterstock" title="Shutterstock">Shutterstock</a>
+                <a href="https://www.pixsell.hr/agency?q=andreas%20schjelderup" target="_blank" class="link pixsell" title="Pixsell">Pixsell</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
